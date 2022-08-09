@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:background="@drawable/gradiant_animation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".ReceivePage">
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="56dp"
+            android:onClick="toSendPage"
+            android:text="SEND"
+            tools:ignore="ContentDescription,HardcodedText,OnClick" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="50dp"
+            android:gravity="center"
+            android:text="RECEIVE"
+            android:textColor="@color/white_gray"
+            android:textSize="24sp"
+            tools:ignore="ContentDescription,HardcodedText" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/received_cypher_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/linear_layout1"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edit_text_border"
+        android:padding="8dp"
+        android:text="Your Cypher Massage Will Appear here"
+        android:textColor="@color/white"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/encrypt_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/received_cypher_text_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:drawableEnd="@drawable/ic_arrow_down"
+        android:text="Decrypt"
+        android:textAllCaps="false"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/decrypted_massage_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/encrypt_btn"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edit_text_border"
+        android:hint="THE ACTUAL MASSAGE"
+        android:padding="8dp"
+        android:textColor="@color/white_gray"
+        android:textColorHint="@color/white_gray"
+        android:textSize="14sp"
+        tools:ignore="HardcodedText" />
+
+
+    <Button
+        android:id="@+id/show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/decrypted_massage_text_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Massage History"
+        android:textAllCaps="false"
+        android:textSize="24dp"
+        tools:ignore="HardcodedText" />
+
+
+
+
+</RelativeLayout>
